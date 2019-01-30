@@ -1,4 +1,4 @@
-# 3D printer Z Bolt Classic Parts
+# Z Bolt Classic
 
 Z-Bolt Classic is an open-source 3D printer for home and professional use. 
 
