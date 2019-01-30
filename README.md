@@ -7,5 +7,5 @@ This repository contains:
 - .dwg files for laser cut
 - preconfigured firmware files
 
-License
+# License
 Z Bolt printer is released under the [GNU General Public License v3.0.](https://opensource.org/licenses/GPL-3.0)
