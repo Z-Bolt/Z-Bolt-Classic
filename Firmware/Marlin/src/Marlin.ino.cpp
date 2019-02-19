@@ -4,7 +4,7 @@
 # 37 "/Users/aleksei/Mine/z-bolt-sources/Z-Bolt-Classic/Firmware/Marlin/src/Marlin.ino"
 #include "MarlinConfig.h"
 
-#if ENABLED(ULTRA_LCD)
+ #if ENABLED(ULTRA_LCD)
   #if ENABLED(LCD_I2C_TYPE_PCF8575)
     #include <Wire.h>
     #include <LiquidCrystal_I2C.h>
@@ -22,25 +22,25 @@
   #endif
 #endif
 
-#if HAS_DIGIPOTSS
+ #if HAS_DIGIPOTSS
   #include <SPI.h>
 #endif
 
-#if ENABLED(DIGIPOT_I2C)
+ #if ENABLED(DIGIPOT_I2C)
   #include <Wire.h>
 #endif
 
-#if ENABLED(HAVE_TMCDRIVER)
+ #if ENABLED(HAVE_TMCDRIVER)
   #include <SPI.h>
   #include <TMC26XStepper.h>
 #endif
 
-#if ENABLED(HAVE_TMC2130DRIVER)
+ #if ENABLED(HAVE_TMC2130DRIVER)
   #include <SPI.h>
   #include <Trinamic_TMC2130.h>
 #endif
 
-#if ENABLED(HAVE_L6470DRIVER)
+ #if ENABLED(HAVE_L6470DRIVER)
   #include <SPI.h>
   #include <L6470.h>
 #endif
