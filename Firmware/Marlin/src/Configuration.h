@@ -313,9 +313,9 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-#define  DEFAULT_Kp 15.41
-#define  DEFAULT_Ki 1.29
-#define  DEFAULT_Kd 46.21
+#define  DEFAULT_Kp 22.37
+#define  DEFAULT_Ki 4.33
+#define  DEFAULT_Kd 29.69
 
 #endif // PIDTEMP
 
@@ -437,8 +437,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false // set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING true // set to true to invert the logic of the endstop.
@@ -470,7 +470,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 280 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 327 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -485,7 +485,7 @@
  * Override with M201
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 2000, 2000, 100, 5000 }
 
 /**
  * Default Acceleration (change/s) change = mm/s
@@ -495,8 +495,8 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration for printing moves
-#define DEFAULT_RETRACT_ACCELERATION  3000    // E acceleration for retracts
+#define DEFAULT_ACCELERATION          2500    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_RETRACT_ACCELERATION  2500    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   3000   // X, Y, Z acceleration for travel (non printing) moves
 
 /**
@@ -671,14 +671,14 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false
-#define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR true
+#define INVERT_Z_DIR true
 
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -886,7 +886,7 @@
 // M501 - reads parameters from EEPROM (if you need reset them after you changed them temporarily).
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //define this to enable EEPROM support
-//#define EEPROM_SETTINGS
+#define EEPROM_SETTINGS
 
 #if ENABLED(EEPROM_SETTINGS)
   // To disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
