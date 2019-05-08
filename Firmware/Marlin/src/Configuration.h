@@ -313,9 +313,9 @@
   #define K1 0.95 //smoothing factor within the PID
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-#define  DEFAULT_Kp 22.37
-#define  DEFAULT_Ki 4.33
-#define  DEFAULT_Kd 29.69
+#define  DEFAULT_Kp 19.37
+#define  DEFAULT_Ki 3.79
+#define  DEFAULT_Kd 24.76
 
 #endif // PIDTEMP
 
@@ -348,9 +348,9 @@
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
 
-#define  DEFAULT_bedKp 214.76
-#define  DEFAULT_bedKi 17.62
-#define  DEFAULT_bedKd 654.44
+#define  DEFAULT_bedKp 253.27
+#define  DEFAULT_bedKi 42.24
+#define  DEFAULT_bedKd 379.69
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -470,7 +470,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 327 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 314 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -673,7 +673,7 @@
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
 #define INVERT_X_DIR true
 #define INVERT_Y_DIR true
-#define INVERT_Z_DIR true
+#define INVERT_Z_DIR false
 
 // @section extruder
 
